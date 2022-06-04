@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import Table from '../components/Table'
 import Input from '../components/Input';
-
+import { useState, useEffect } from 'react'
 
 
 interface IExcerProps {
@@ -10,10 +10,12 @@ interface IExcerProps {
 }
 
 const Excercisee = ({excercise} : IExcerProps) => {
+    const [display, setDisplay] = useState('')
+    console.log(display)
   return (
     <>
-        <Input></Input>
-        <Table></Table>
+        <Input setDisplay={setDisplay}></Input>
+        <Table setDisplay={display}></Table>
     </>
   )
 }
