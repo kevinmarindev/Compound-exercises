@@ -57,7 +57,7 @@ interface ITableProps {
 export default function BasicTable({ setDisplay }: ITableProps) {
 
   const [arrayOne, setArrayOne] = useState<[][]>([])
-  const [refresh, setRefresh] = useState(0)
+  
   
   useEffect(()=> {
     // setDisplay(displayIt as string)
