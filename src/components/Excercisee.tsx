@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import Table from '../components/Table'
 import Input from '../components/Input';
+import Bubbles from './Bubble';
 import { useState, useEffect } from 'react'
 
 
@@ -15,6 +16,7 @@ const Excercisee = ({excercise} : IExcerProps) => {
   return (
     <>
         <Input setDisplay={setDisplay}></Input>
+        <Bubbles></Bubbles>
         <Table setDisplay={display}></Table>
     </>
   )
