@@ -98,16 +98,17 @@ export default function BasicTable({ setDisplay }: ITableProps) {
               // onClick={() => setArrayOne(array.filter((thing) => thing !== item)}
               // onClick={()=> localStorage.setItem(`${window.location.pathname}`, JSON.stringify(array.filter((item2) => item2 !== item)))}
               // onMouseUp={()=> setRefresh((prev)=> prev + 1)}
-              onClick={() => runitUp(array, item)}
+              
              
             >
               <TableCell component="th" scope="row">
                 {String(item[0])}
               </TableCell>
-              <TableCell align="right">{item[1]}</TableCell>
-              <TableCell align="right">{item[2]}</TableCell>
-              <TableCell align="right" >{item[3]}</TableCell>
-              <TableCell align="right" ><Delete/></TableCell>
+              <TableCell align="center">{item[1]}</TableCell>
+              <TableCell align="center">{item[2]}</TableCell>
+              <TableCell align="center" >{item[3]}</TableCell>
+              <div><Delete onClick={() => runitUp(array, item)}/></div>
+              {/* <TableCell align="right" onClick={() => runitUp(array, item)}></TableCell> */}
             </TableRow>
           ))}
         </TableBody>
