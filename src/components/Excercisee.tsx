@@ -16,7 +16,7 @@ const Excercisee = ({excercise} : IExcerProps) => {
   return (
     <>
         <Input setDisplay={setDisplay}></Input>
-        <Bubbles></Bubbles>
+        <Bubbles setDisplay={display}></Bubbles>
         <Table setDisplay={display}></Table>
     </>
   )

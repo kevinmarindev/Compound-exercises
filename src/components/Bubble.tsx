@@ -14,16 +14,23 @@ const options = {
             y: {
                 beginAtZero: true,
             },
+            x: {
+              beginAtZero: true,
+            }
         },};
 
+interface ITableProps {
+    setDisplay?: string,
+} 
 
-const Bubbles = () => {
+
+const Bubbles = ({ setDisplay }: ITableProps) => {
 //   const [arrayOne, setArrayOne] = useState<[][]>([])
   const [datas, setData] = useState({
     //   label: '',
       datasets: [
         {
-            label: '',
+            label: 'Table Data',
             data: Array.from( JSON.parse(localStorage.getItem(`${window.location.pathname}`)as string ), (arr : string[]) => ({
                  x: arr[1],
                 y: arr[2],
@@ -35,10 +42,9 @@ const Bubbles = () => {
       
   })
 
-//   useEffect(()=> {
-//     setArrayOne(() => JSON.parse(localStorage.getItem(`${window.location.pathname}`)as string )?.sort((a : any, b : any) => (new Date(a[0])as any) as any - (new Date(b[0]) as any) as any)
-//     )
-//   },[])
+  // useEffect(()=> {
+  //   setData()
+  // },[setDisplay])
 
   return (
     <Bubble data={datas}></Bubble>
