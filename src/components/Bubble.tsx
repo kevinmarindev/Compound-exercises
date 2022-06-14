@@ -26,6 +26,7 @@ interface ITableProps {
 
 const Bubbles = ({ setDisplay }: ITableProps) => {
 //   const [arrayOne, setArrayOne] = useState<[][]>([])
+      // const [datas, setData] = useState({})
   const [datas, setData] = useState({
     //   label: '',
       datasets: [
@@ -42,9 +43,22 @@ const Bubbles = ({ setDisplay }: ITableProps) => {
       
   })
 
-  // useEffect(()=> {
-  //   setData()
-  // },[setDisplay])
+  useEffect(()=> {
+    setData({
+      datasets: [
+        {
+            label: 'Table Data',
+            data: Array.from( JSON.parse(localStorage.getItem(`${window.location.pathname}`)as string ), (arr : string[]) => ({
+                 x: arr[1],
+                y: arr[2],
+                r: arr[3]
+            })),
+            backgroundColor: "rgba(75,192,192,1)",
+        }
+      ]
+      
+  })
+  },[setDisplay])
 
   return (
     <Bubble data={datas}></Bubble>
