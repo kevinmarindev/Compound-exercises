@@ -32,7 +32,7 @@ const Bubbles = ({ setDisplay }: ITableProps) => {
       datasets: [
         {
             label: 'Table Data',
-            data: Array.from( JSON.parse(localStorage.getItem(`${window.location.pathname}`)as string ), (arr : string[]) => ({
+            data: Array.from( JSON.parse(localStorage.getItem(`${window.location.pathname}`)as string ) || [], (arr : string[]) => ({
                  x: arr[1],
                 y: arr[2],
                 r: arr[3]
