@@ -14,9 +14,6 @@ const options = {
             y: {
                 beginAtZero: true,
             },
-            x: {
-              beginAtZero: true,
-            }
         },};
 
 interface ITableProps {
