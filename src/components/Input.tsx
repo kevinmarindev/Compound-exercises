@@ -79,8 +79,11 @@ const Input = ({ setDisplay }: ITableProps) => {
        console.log('beofer success')
        setSuccess(() => true)
        console.log(success)
-
+       console.log('beofer reset')
        dateIt.current?.reset()
+       setDate(()=> '')
+       setWeight(() => '')
+       
        
        setDisplay(() => `${window.location.pathname}${Date.now()}`)
 
