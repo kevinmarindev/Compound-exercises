@@ -83,7 +83,9 @@ const Input = ({ setDisplay }: ITableProps) => {
        dateIt.current?.reset()
        setDate(()=> '')
        setWeight(() => '')
-       
+       setReps(() => '')
+       setSets(() => '')
+
        
        setDisplay(() => `${window.location.pathname}${Date.now()}`)
 
