@@ -39,7 +39,8 @@ import { Delete } from '@mui/icons-material'
 //        }
 
 interface ITableProps {
-    setDisplay?: string,
+    display?: string,
+    setDisplay: Function 
 } 
 
 
@@ -54,7 +55,7 @@ interface ITableProps {
 //   createData(localStorage.getItem(`${window.location.pathname}`) as string),
 // ];
 // &nbsp;
-export default function BasicTable({ setDisplay }: ITableProps) {
+export default function BasicTable({ display, setDisplay }: ITableProps) {
 
   const [arrayOne, setArrayOne] = useState<[][]>([])
   
@@ -65,13 +66,16 @@ export default function BasicTable({ setDisplay }: ITableProps) {
     )
     
     
-  },[setDisplay])
+  },[display])
 
   const runitUp = (array: [][], item : []) => {
     localStorage.setItem(`${window.location.pathname}`, JSON.stringify(array.filter((item2) => item2 !== item)))
 
     setArrayOne(() => JSON.parse(localStorage.getItem(`${window.location.pathname}`)as string )?.sort((a : any, b : any) => (new Date(a[0])as any) as any - (new Date(b[0]) as any) as any)
     )
+
+    setDisplay(() => `${window.location.pathname}${Date.now()}`)
+
 
   }
 
