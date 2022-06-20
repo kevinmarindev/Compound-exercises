@@ -98,7 +98,7 @@ export default function BasicTable({ display, setDisplay }: ITableProps) {
           {arrayOne?.map((item : any, idx: number, array) => (
             <TableRow
               key={Math.random() * 100}
-              sx={{ '&:last-child td, &:last-child th': { border: 1 } }}
+              sx={{ '&:last-child td, &:last-child th': { border: 2 } }}
               // onClick={() => setArrayOne(array.filter((thing) => thing !== item)}
               // onClick={()=> localStorage.setItem(`${window.location.pathname}`, JSON.stringify(array.filter((item2) => item2 !== item)))}
               // onMouseUp={()=> setRefresh((prev)=> prev + 1)}

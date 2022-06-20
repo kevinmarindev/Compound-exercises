@@ -18,8 +18,8 @@ function App() {
 
       <Routes>
         <Route path='/' element={
-          <Container>
-            <Grid container spacing={2} rowSpacing={{xs: 0, sm: 5}} >
+          <Container sx={{backgroundColor:'#F6F7F8', borderRadius: '10px'}}>
+            <Grid container spacing={2} rowSpacing={{xs: 0, sm: 5}}>
               <Card excercise={'Deadlift'}/>
               <Card excercise={'Squat'}/>
               <Card excercise={'Bench Press'}/>

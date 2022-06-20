@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
-import Table from '../components/Table'
+import Table from '../components/Table';
+import Container  from '@mui/system/Container';
 import Input from '../components/Input';
 import Bubbles from './Bubble';
 import { useState, useEffect } from 'react'
@@ -14,11 +15,11 @@ const Excercisee = ({excercise} : IExcerProps) => {
     const [display, setDisplay] = useState('')
     console.log(display)
   return (
-    <>
+    <Container>
         <Input setDisplay={setDisplay}></Input>
         <Bubbles setDisplay={display}></Bubbles>
         <Table display={display} setDisplay={setDisplay}></Table>
-    </>
+    </Container>
   )
 }
 
