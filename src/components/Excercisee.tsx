@@ -15,7 +15,7 @@ const Excercisee = ({excercise} : IExcerProps) => {
     const [display, setDisplay] = useState('')
     console.log(display)
   return (
-    <Container>
+    <Container fixed>
         <Input setDisplay={setDisplay}></Input>
         <Bubbles setDisplay={display}></Bubbles>
         <Table display={display} setDisplay={setDisplay}></Table>
