@@ -95,11 +95,12 @@ const Input = ({ setDisplay }: ITableProps) => {
     // console.log(errsOnForm)
 
     // {'date': Boolean(date), 'weight': Boolean(weight), 'reps': Boolean(reps), 'sets': Boolean(sets)}
-    
+    // sx={{'& .MuiTextField-root' : {backgroundColor: 'red'}}}
   return (
     <div>
-        <Box component={'form'} id='form1' ref={dateIt}>
-            <Typography component={'h4'} variant={'h5'} >Add new workout</Typography>
+        <Box component={'form'} id='form1' ref={dateIt} 
+        sx={{'& .MuiTextField-root' : {backgroundColor: {xs: 'red', sm: 'blue'}}}}>
+            <Typography component={'h4'} variant={'h5'} sx={{color: '#2EC4B6'}}>Add Workout</Typography>
          
             <TextField error={errsOnForm.date} type='date' id="input-date" label="Date" InputLabelProps={{ shrink: true }} onBlur={(e) => setDate(e.target.value)} />
 

@@ -34,7 +34,7 @@ const Bubbles = ({ setDisplay }: ITableProps) => {
                 y: arr[2],
                 r: arr[3]
             })),
-            backgroundColor: "rgba(75,192,192,1)",
+            backgroundColor: "#20A4F3",
         }
       ]
       
@@ -50,7 +50,7 @@ const Bubbles = ({ setDisplay }: ITableProps) => {
                 y: arr[2],
                 r: arr[3]
             })),
-            backgroundColor: "rgba(75,192,192,1)",
+            backgroundColor: "#20A4F3",
         }
       ]
       
@@ -58,7 +58,7 @@ const Bubbles = ({ setDisplay }: ITableProps) => {
   },[setDisplay])
 
   return (
-    <Bubble data={datas}></Bubble>
+    <Bubble data={datas} options={options}></Bubble>
   )
 }
 

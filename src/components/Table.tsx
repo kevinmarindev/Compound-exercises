@@ -98,7 +98,7 @@ export default function BasicTable({ display, setDisplay }: ITableProps) {
           {arrayOne?.map((item : any, idx: number, array) => (
             <TableRow
               key={Math.random() * 100}
-              sx={{ '&:last-child td, &:last-child th': { border: 2 } }}
+              // sx={{ '&:last-child td, &:last-child th': { border: 2 } }}
               // onClick={() => setArrayOne(array.filter((thing) => thing !== item)}
               // onClick={()=> localStorage.setItem(`${window.location.pathname}`, JSON.stringify(array.filter((item2) => item2 !== item)))}
               // onMouseUp={()=> setRefresh((prev)=> prev + 1)}
@@ -111,7 +111,7 @@ export default function BasicTable({ display, setDisplay }: ITableProps) {
               <TableCell align="center">{item[1]}</TableCell>
               <TableCell align="center">{item[2]}</TableCell>
               <TableCell align="center" >{item[3]}</TableCell>
-              <div><Delete onClick={() => runitUp(array, item)}/></div>
+              <div style={{marginTop: '25%'}}><Delete onClick={() => runitUp(array, item)}/></div>
               {/* <TableCell align="right" onClick={() => runitUp(array, item)}></TableCell> */}
             </TableRow>
           ))}
