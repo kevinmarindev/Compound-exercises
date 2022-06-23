@@ -84,8 +84,8 @@ export default function BasicTable({ display, setDisplay }: ITableProps) {
   console.log('rendering table ')
   
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+    <TableContainer component={Paper} sx={{width: "100%", marginBottom: '30px', marginTop: '40px'}} >
+      <Table sx={{ minWidth: 300 }} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>Date</TableCell>

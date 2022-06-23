@@ -4,7 +4,7 @@ import { Box } from "@mui/system"
 import  Typography  from "@mui/material/Typography"
 import React, { useState, useRef, ReactNode } from "react"
 import { useLocation } from 'react-router-dom'
-import { AltRoute } from "@mui/icons-material"
+import { AltRoute, Minimize } from "@mui/icons-material"
 
 interface IerrProps {
     date?: boolean,
@@ -96,22 +96,29 @@ const Input = ({ setDisplay }: ITableProps) => {
 
     // {'date': Boolean(date), 'weight': Boolean(weight), 'reps': Boolean(reps), 'sets': Boolean(sets)}
     // sx={{'& .MuiTextField-root' : {backgroundColor: 'red'}}}
+    // sx={{'& .MuiTextField-root' : {backgroundColor: {xs: 'red', sm: 'blue'}}}}
   return (
     <div>
-        <Box component={'form'} id='form1' ref={dateIt} 
-        sx={{'& .MuiTextField-root' : {backgroundColor: {xs: 'red', sm: 'blue'}}}}>
-            <Typography component={'h4'} variant={'h5'} sx={{color: '#2EC4B6'}}>Add Workout</Typography>
+        <Box component={'form'} id='form1' ref={dateIt} sx={{'& .MuiTextField-root': { marginBottom: 2, marginRight: 2 } }}
+        >
+            <Typography component={'h4'} variant={'h5'} color="black">Add Workout</Typography>
+
+            <br />
          
-            <TextField error={errsOnForm.date} type='date' id="input-date" label="Date" InputLabelProps={{ shrink: true }} onBlur={(e) => setDate(e.target.value)} />
+            <TextField error={errsOnForm.date} type='date' id="input-date" label="Date" InputLabelProps={{ shrink: true }} onBlur={(e) => setDate(e.target.value)} sx={{width: 'min(220px, 50%)'}}/>
+
+            <br />
 
             <TextField error={errsOnForm.weight} type='number' id="input-weight" label="Weight" 
-            onChange={(e) => setWeight(e.target.value)} />
+            onChange={(e) => setWeight(e.target.value)} sx={{width: {xs: '25%'}}}/>
 
-            <TextField error={errsOnForm.reps} type='number' id="input-reps" label="Reps" onChange={(e) => setReps(e.target.value)} />
+            <TextField error={errsOnForm.reps} type='number' id="input-reps" label="Reps" onChange={(e) => setReps(e.target.value)} sx={{width: {xs: '25%'}}}/>
 
-            <TextField error={errsOnForm.sets} type='number' id="input-sets" label="Sets" onChange={(e) => setSets(e.target.value)} />
+            <TextField error={errsOnForm.sets} type='number' id="input-sets" label="Sets" onChange={(e) => setSets(e.target.value)} sx={{width: {xs: '25%'}}}/>
 
-            <Button variant='outlined' form='form1' onClick={submitForm}size='small'>Submit</Button>
+            
+
+            <Button variant='contained' form='form1' color='primary' onClick={submitForm}size='medium' sx={{display: 'block', marginBottom: 3}}>Submit</Button>
 
             {alert ? <Alert severity="error">Numbers are beyond human capabilities</Alert> : success ? <Alert severity="success">Data added successfully</Alert> : ''}
 

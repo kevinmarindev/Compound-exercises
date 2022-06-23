@@ -14,6 +14,9 @@ const options = {
             y: {
                 beginAtZero: true,
             },
+            x: {
+                beginAtZero: true,
+            },
         },};
 
 interface ITableProps {
@@ -34,7 +37,7 @@ const Bubbles = ({ setDisplay }: ITableProps) => {
                 y: arr[2],
                 r: arr[3]
             })),
-            backgroundColor: "#20A4F3",
+            backgroundColor: "#2EC4B6",
         }
       ]
       
@@ -50,7 +53,7 @@ const Bubbles = ({ setDisplay }: ITableProps) => {
                 y: arr[2],
                 r: arr[3]
             })),
-            backgroundColor: "#20A4F3",
+            backgroundColor: "#2EC4B6",
         }
       ]
       

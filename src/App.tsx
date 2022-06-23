@@ -18,7 +18,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={
-          <Container sx={{backgroundColor:'#F6F7F8', borderRadius: '10px'}}>
+          <Container sx={{ borderRadius: '10px', backgroundColor:{sm: '#F6F7F8'}, boxShadow:'0 0 8px #011627 '}}>
             <Grid container spacing={2} rowSpacing={{xs: 0, sm: 5}}>
               <Card excercise={'Deadlift'}/>
               <Card excercise={'Squat'}/>

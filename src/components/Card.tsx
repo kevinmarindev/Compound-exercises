@@ -15,9 +15,9 @@ interface ICardProps {
 
 const Card = ({excercise} : ICardProps) => {
   return (
-    <Grid item sm={6} xs={12} sx={{my: 2}}>
+    <Grid item  xs={6} sx={{my: 2}}>
         <Link to={`/${excercise?.toLocaleLowerCase()}`} style={{textDecoration: 'none'}}>
-        <Paper elevation={5} className={`${styles.body}`} sx={{border:'solid 2px #011627', borderRadius:'10px', ':hover': {transform: "scale(1.03)", borderColor: '#20A4F3'}}}>
+        <Paper elevation={5} className={`${styles.body}`} sx={{border:'solid 2px #011627', borderRadius:'10px', boxShadow:'0 0 4px black', ':hover': {transform: "scale(1.03)", borderColor: '#20A4F3'}}}>
 
             <Typography component={'h3'} variant={'h5'} textAlign='center'>{excercise}</Typography>
 
