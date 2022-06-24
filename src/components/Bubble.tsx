@@ -7,6 +7,7 @@ import {
   Legend,
 } from 'chart.js';
 import { useState, useEffect } from "react";
+import { BorderColor } from "@mui/icons-material";
 
 ChartJS.register(LinearScale, PointElement, Tooltip, Legend);
 const options = {
@@ -20,11 +21,11 @@ const options = {
         },};
 
 interface ITableProps {
-    setDisplay?: string,
+    display?: string,
 } 
 
 
-const Bubbles = ({ setDisplay }: ITableProps) => {
+const Bubbles = ({ display }: ITableProps) => {
 //   const [arrayOne, setArrayOne] = useState<[][]>([])
       // const [datas, setData] = useState({})
   const [datas, setData] = useState({
@@ -37,7 +38,8 @@ const Bubbles = ({ setDisplay }: ITableProps) => {
                 y: arr[2],
                 r: arr[3]
             })),
-            backgroundColor: "#2EC4B6",
+            backgroundColor: "#FE3366",
+            borderColor: '#F6F7F8'
         }
       ]
       
@@ -53,12 +55,14 @@ const Bubbles = ({ setDisplay }: ITableProps) => {
                 y: arr[2],
                 r: arr[3]
             })),
-            backgroundColor: "#2EC4B6",
+            backgroundColor: '#FE3366',
+            borderColor: '#F6F7F8',
         }
+        
       ]
       
   })
-  },[setDisplay])
+  },[display])
 
   return (
     <Bubble data={datas} options={options}></Bubble>

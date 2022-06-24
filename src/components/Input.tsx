@@ -2,9 +2,8 @@ import { Alert, Button } from "@mui/material"
 import TextField from "@mui/material/TextField"
 import { Box } from "@mui/system"
 import  Typography  from "@mui/material/Typography"
-import React, { useState, useRef, ReactNode } from "react"
+import React, { useState, useRef } from "react"
 import { useLocation } from 'react-router-dom'
-import { AltRoute, Minimize } from "@mui/icons-material"
 
 interface IerrProps {
     date?: boolean,
@@ -12,6 +11,7 @@ interface IerrProps {
     reps?: boolean,
     sets?: boolean
 }
+
 interface ITableProps {
     setDisplay: Function,
 } 
@@ -26,14 +26,9 @@ const Input = ({ setDisplay }: ITableProps) => {
     const [alert, setAlert] = React.useState(false)
     const [success, setSuccess] = React.useState(false)
 
-
     const Location = useLocation()
 
     const dateIt= useRef<HTMLFormElement>(null)
-    // const weightIt = useRef()
-    // const repIt = useRef()
-    // const setsIt = useRef()
-
 
     const submitForm =  (e: React.SyntheticEvent) => {
         e.preventDefault()
@@ -76,10 +71,9 @@ const Input = ({ setDisplay }: ITableProps) => {
            setAlert(() => false)
        }
 
-       console.log('beofer success')
        setSuccess(() => true)
-       console.log(success)
-       console.log('beofer reset')
+
+     
        dateIt.current?.reset()
        setDate(()=> '')
        setWeight(() => '')
@@ -92,11 +86,6 @@ const Input = ({ setDisplay }: ITableProps) => {
 
        
     }
-    // console.log(errsOnForm)
-
-    // {'date': Boolean(date), 'weight': Boolean(weight), 'reps': Boolean(reps), 'sets': Boolean(sets)}
-    // sx={{'& .MuiTextField-root' : {backgroundColor: 'red'}}}
-    // sx={{'& .MuiTextField-root' : {backgroundColor: {xs: 'red', sm: 'blue'}}}}
   return (
     <div>
         <Box component={'form'} id='form1' ref={dateIt} sx={{'& .MuiTextField-root': { marginBottom: 2, marginRight: 2 } }}

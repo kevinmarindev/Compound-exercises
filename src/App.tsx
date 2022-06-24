@@ -4,17 +4,13 @@ import  Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid'
 import HeadBar from './components/HeadBar';
 import Excercisee from './components/Excercisee';
-import Table from './components/Table'
-import Input from './components/Input';
 import { BrowserRouter as Router, Navigate, Route, Routes, useLocation } from 'react-router-dom'
 
 function App() {
-  // const location = useLocation()
   return (
     <Router>
 
       <HeadBar/>
-      {/* <Input></Input> */}
 
       <Routes>
         <Route path='/' element={
@@ -36,8 +32,6 @@ function App() {
         <Route path='*' element={<Navigate to={'/'}/>}></Route>
        
       </Routes>
-
-      {/* <Table /> */}
 
     </Router>
   );
