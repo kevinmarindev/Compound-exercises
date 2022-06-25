@@ -88,9 +88,9 @@ const Input = ({ setDisplay }: ITableProps) => {
     }
   return (
     <div>
-        <Box component={'form'} id='form1' ref={dateIt} sx={{'& .MuiTextField-root': { marginBottom: 2, marginRight: 2 } }}
+        <Box component={'form'} id='form1' ref={dateIt} sx={{'& .MuiTextField-root': { marginBottom: 2, marginRight: 2, boxShadow: '0 0 2px #011627' } }}
         >
-            <Typography component={'h4'} variant={'h5'} color="black">Add Workout</Typography>
+            <Typography component={'h4'} variant={'h5'} color="black" fontWeight={'bold'}>Add Workout</Typography>
 
             <br />
          
