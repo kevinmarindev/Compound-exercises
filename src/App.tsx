@@ -4,7 +4,7 @@ import  Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid'
 import HeadBar from './components/HeadBar';
 import Excercisee from './components/Excercisee';
-import { BrowserRouter as Router, Navigate, Route, Routes, useLocation } from 'react-router-dom'
+import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
@@ -25,9 +25,9 @@ function App() {
         }>
         </Route>
         <Route path='/deadlift' element={<Excercisee excercise={'Deadlift'}/>}></Route>
-        <Route path='/squat' element={<Excercisee excercise={'Squat'}/>}></Route>
-        <Route path='/bench%20press' element={<Excercisee excercise={'Bench Press'}/>}></Route>
-        <Route path='/overhead%20press' element={<Excercisee excercise={'Overhead Press'}/>}></Route>
+        <Route path='/squat' element={<Excercisee excercise={'squat'}/>}></Route>
+        <Route path='/bench%20press' element={<Excercisee excercise={'bench press'}/>}></Route>
+        <Route path='/overhead%20press' element={<Excercisee excercise={'overhead press'}/>}></Route>
 
         <Route path='*' element={<Navigate to={'/'}/>}></Route>
        

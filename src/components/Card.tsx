@@ -4,8 +4,7 @@ import { ReactNode } from 'react';
 import Typography from '@mui/material/Typography'
 import styles from "../stylesheets/card.module.scss"
 import { Link } from 'react-router-dom'
-import { transform } from 'typescript';
-import { Scale } from '@mui/icons-material';
+
 
 
 interface ICardProps {
@@ -14,6 +13,7 @@ interface ICardProps {
 }
 
 const Card = ({excercise} : ICardProps) => {
+  console.log(excercise)
   return (
     <Grid item  xs={6} sx={{my: 2}}>
         <Link to={`/${excercise?.toLocaleLowerCase()}`} style={{textDecoration: 'none'}}>
@@ -21,18 +21,15 @@ const Card = ({excercise} : ICardProps) => {
 
             <Typography component={'h3'} variant={'h5'} textAlign='center'>{excercise}</Typography>
 
-            <img src={`${excercise?.toLowerCase()}.jpg`} alt="Dead lift" style={{width: '100%', aspectRatio: 'initial'}} />
+            <img src={excercise === 'Deadlift' ? process.env.REACT_APP_DEAD : excercise === 'Squat' ? process.env.REACT_APP_SQUAT : excercise === 'Bench Press'  ? process.env.REACT_APP_BENCH : process.env.REACT_APP_OVER} alt="Dead lift" style={{width: '100%', aspectRatio: 'initial'}} />
 
         </Paper>
         </Link>
 
+
+
     </Grid>
   )
-}
-
-let style = {
-  
-  
 }
 
 
