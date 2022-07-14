@@ -88,22 +88,22 @@ const Input = ({ setDisplay }: ITableProps) => {
     }
   return (
     <div>
-        <Box component={'form'} id='form1' ref={dateIt} sx={{'& .MuiTextField-root': { marginBottom: 2, marginRight: 2, boxShadow: '0 0 2px #011627' } }}
+        <Box component={'form'} id='form1' ref={dateIt} sx={{'& .MuiTextField-root': { marginBottom: 2, marginRight: 2 } }}
         >
             <Typography component={'h4'} variant={'h5'} color="black" fontWeight={'bold'}>Add Workout</Typography>
 
             <br />
          
-            <TextField error={errsOnForm.date} type='date' id="input-date" label="Date" InputLabelProps={{ shrink: true }} onBlur={(e) => setDate(e.target.value)} sx={{width: 'min(220px, 50%)'}}/>
+            <TextField error={errsOnForm.date} type='date' id="input-date" label="Date" InputLabelProps={{ shrink: true }} onBlur={(e) => setDate(e.target.value)} sx={{width: 'min(220px, 50%)'}} helperText="Required"/>
 
             <br />
 
             <TextField error={errsOnForm.weight} type='number' id="input-weight" label="Weight" 
-            onChange={(e) => setWeight(e.target.value)} sx={{width: {xs: '25%'}}}/>
+            onChange={(e) => setWeight(e.target.value)} sx={{width: {xs: '25%'}}} helperText="Required"/>
 
-            <TextField error={errsOnForm.reps} type='number' id="input-reps" label="Reps" onChange={(e) => setReps(e.target.value)} sx={{width: {xs: '25%'}}}/>
+            <TextField error={errsOnForm.reps} type='number' id="input-reps" label="Reps" onChange={(e) => setReps(e.target.value)} sx={{width: {xs: '25%'}}} helperText="Required"/>
 
-            <TextField error={errsOnForm.sets} type='number' id="input-sets" label="Sets" onChange={(e) => setSets(e.target.value)} sx={{width: {xs: '25%'}}}/>
+            <TextField error={errsOnForm.sets} type='number' id="input-sets" label="Sets" onChange={(e) => setSets(e.target.value)} sx={{width: {xs: '25%'}}} helperText="Required"/>
 
             
 

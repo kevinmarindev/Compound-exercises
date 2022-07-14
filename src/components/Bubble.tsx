@@ -13,9 +13,25 @@ ChartJS.register(LinearScale, PointElement, Tooltip, Legend);
 const options = {
         scales: {
             y: {
-                beginAtZero: true,
+                display: true,
+                title: {
+                  display: true,
+                  text: "Reps",
+                  font: {
+                    size: 15
+                  },
+                },
+                beginAtZero: true
             },
             x: {
+                display: true,
+                title: {
+                  display: true,
+                  text: 'Weight',
+                  font: {
+                    size: 16
+                  },
+                },
                 beginAtZero: true,
             },
         },};

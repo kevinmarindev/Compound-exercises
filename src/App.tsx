@@ -26,8 +26,8 @@ function App() {
         </Route>
         <Route path='/deadlift' element={<Excercisee excercise={'Deadlift'}/>}></Route>
         <Route path='/squat' element={<Excercisee excercise={'squat'}/>}></Route>
-        <Route path='/bench%20press' element={<Excercisee excercise={'bench press'}/>}></Route>
-        <Route path='/overhead%20press' element={<Excercisee excercise={'overhead press'}/>}></Route>
+        <Route path='/benchpress' element={<Excercisee excercise={'bench press'}/>}></Route>
+        <Route path='/overheadpress' element={<Excercisee excercise={'overhead press'}/>}></Route>
 
         <Route path='*' element={<Navigate to={'/'}/>}></Route>
        
