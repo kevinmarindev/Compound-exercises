@@ -7,9 +7,9 @@ const HeadBar = () => {
   const location = useLocation()
   console.log(location.pathname.toUpperCase().split('/').splice(1).join().replaceAll(/p/gi, ' P'))
   return (
-    <Box component='header' style={{backgroundColor:'RGB(212,212,212)',  boxShadow: '0 0 10px #20A4F3'}} mb={8} px={2}>
+    <Box component='header' style={{backgroundColor:'white', boxShadow: "0 0 18px RGB(255,67,30)"}} mb={8} px={2}>
 
-        <Typography component={'h3'} variant={'h3'} display={'flex'} justifyContent={'center'} color={'black'} fontWeight='bold'>{location.pathname === '/' ? 'Compound Exercises Tracker' : location.pathname.toUpperCase().split('/').splice(1).join().replaceAll(/p/gi, ' P')}</Typography>
+        <Typography component={'h3'} variant={'h3'} display={'flex'} justifyContent={'center'} color={'RGB(255,67,30)'} fontWeight='bold'>{location.pathname === '/' ? 'Compound Exercises Tracker' : location.pathname.toUpperCase().split('/').splice(1).join().replaceAll(/p/gi, ' P')}</Typography>
 
         {/* `${location.pathname.replaceAll(/\/|\%|\d\d/gi, ' ').toUpperCase()}` */}
 

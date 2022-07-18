@@ -8,13 +8,13 @@ import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-d
 
 function App() {
   return (
-    <Router>
+    <Router >
 
       <HeadBar/>
 
       <Routes>
         <Route path='/' element={
-          <Container sx={{ borderRadius: '10px', backgroundColor:{sm: '#F6F7F8'}, boxShadow:'0 0 8px #011627 '}}>
+          <Container sx={{ borderRadius: '10px', backgroundColor:'RGB(34,34,34)'}}>
             <Grid container spacing={2} rowSpacing={{xs: 0, sm: 5}}>
               <Card excercise={'Deadlift'}/>
               <Card excercise={'Squat'}/>

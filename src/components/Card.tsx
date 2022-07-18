@@ -19,7 +19,7 @@ const Card = ({excercise} : ICardProps) => {
     <Grid item  xs={6} sx={{my: 2}}>
         <Link to={`/${excercise?.split(' ').join('')?.toLocaleLowerCase()}`} style={{textDecoration: 'none'}}>
         
-        <Paper elevation={5} className={`${styles.body}`} sx={{ border:'solid 2px #011627', borderRadius:'10px', boxShadow:'0 0 4px #FE3366', ':hover': {transform: "scale(1.03)", borderColor: '#20A4F3'}}}>
+        <Paper elevation={5} className={`${styles.body}`} sx={{ border:'solid 2px #011627', borderRadius:'10px', boxShadow:'0 0 20px RGB(110,110,110), 8px 0 20px RGB(110,110,110)', ':hover': {transform: "scale(1.03)", borderColor: 'RGB(255,67,30)'}}}>
 
             <Typography component={'h3'} variant={'h5'} textAlign='center'>{excercise}</Typography>
 
