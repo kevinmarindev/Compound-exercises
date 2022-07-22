@@ -87,14 +87,14 @@ const Input = ({ setDisplay }: ITableProps) => {
        
     }
   return (
-    <div>
-        <Box component={'form'} id='form1' ref={dateIt} sx={{'& .MuiTextField-root': { marginBottom: 2, marginRight: 2 } }}
+    <div style={{boxShadow:'0 0 20px RGB(110,110,110), 8px 0 20px RGB(110,110,110)', backgroundColor: 'RGB(114,114,114)'}}>
+        <Box component={'form'} id='form1' ref={dateIt} sx={{'& .MuiTextField-root': { marginBottom: 2, marginRight: 2 }}}
         >
-            <Typography component={'h4'} variant={'h5'} color="black" fontWeight={'bold'}>Add Workout</Typography>
+            <Typography component={'h4'} variant={'h5'} color="black" fontWeight={'bold'} sx={{backgroundColor: 'white'}}>Add Workout</Typography>
 
             <br />
          
-            <TextField error={errsOnForm.date} type='date' id="input-date" label="Date" InputLabelProps={{ shrink: true }} onBlur={(e) => setDate(e.target.value)} sx={{width: 'min(220px, 50%)'}} helperText="Required"/>
+            <TextField error={errsOnForm.date} type='date' id="input-date" label="Date" InputLabelProps={{ shrink: true }} onBlur={(e) => setDate(e.target.value)} sx={{width: 'min(220px, 50%)', color:"orange" }} helperText="Required"/>
 
             <br />
 
