@@ -87,10 +87,10 @@ const Input = ({ setDisplay }: ITableProps) => {
        
     }
   return (
-    <div style={{boxShadow:'0 0 20px RGB(110,110,110), 8px 0 20px RGB(110,110,110)', backgroundColor: 'RGB(212,212,212)'}}>
+    <div style={{ backgroundColor: 'RGB(34,34,34)'}}>
         <Box component={'form'} id='form1' ref={dateIt} sx={{'& .MuiTextField-root': { marginBottom: 2, marginRight: 2 }}}
         >
-            <Typography component={'h4'} variant={'h5'} color="black" fontWeight={'bold'} sx={{backgroundColor: 'white'}}>Add Workout</Typography>
+            <Typography component={'h4'} variant={'h5'} color="black" fontWeight={'bold'} sx={{backgroundColor: 'RGB(34,34,34)'}}>Add Workout</Typography>
 
             <br />
          
