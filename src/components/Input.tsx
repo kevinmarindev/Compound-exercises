@@ -88,13 +88,10 @@ const Input = ({ setDisplay }: ITableProps) => {
        
     }
   return (
-    <div style={{ backgroundColor: 'RGB(34,34,34)'}}>
+    <div style={{ backgroundColor: 'white'}}>
         <Box component={'form'} id='form1' ref={dateIt} 
-        sx={{'& .MuiTextField-root': { marginBottom: 2, marginRight: 2},
-
-        '& .MuiInputLabel-root': {
-    color: 'white',
-  }
+        sx={{'& .MuiTextField-root': { marginBottom: 2, marginRight: 2}
+    
         }}
         >
             <Typography component={'h4'} variant={'h5'} color="white"

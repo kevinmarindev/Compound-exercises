@@ -14,7 +14,7 @@ const Excercisee = ({excercise} : IExcerProps) => {
     const [display, setDisplay] = useState('')
     console.log(display)
   return (
-    <Container fixed style={{backgroundColor: 'RGB(34,34,34)', borderRadius: '10px'}}>
+    <Container fixed style={{backgroundColor: 'white', borderRadius: '10px'}}>
         <Input setDisplay={setDisplay}></Input>
         <Bubbles display={display}></Bubbles>
         <Table setDisplay={setDisplay} display={display}></Table>
