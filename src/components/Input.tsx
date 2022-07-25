@@ -4,6 +4,7 @@ import { Box } from "@mui/system"
 import  Typography  from "@mui/material/Typography"
 import React, { useState, useRef } from "react"
 import { useLocation } from 'react-router-dom'
+import { css } from '@emotion/react'
 
 interface IerrProps {
     date?: boolean,
@@ -88,13 +89,22 @@ const Input = ({ setDisplay }: ITableProps) => {
     }
   return (
     <div style={{ backgroundColor: 'RGB(34,34,34)'}}>
-        <Box component={'form'} id='form1' ref={dateIt} sx={{'& .MuiTextField-root': { marginBottom: 2, marginRight: 2 }}}
+        <Box component={'form'} id='form1' ref={dateIt} 
+        sx={{'& .MuiTextField-root': { marginBottom: 2, marginRight: 2},
+
+        '& .MuiInputLabel-root': {
+    color: 'white',
+  }
+        }}
         >
-            <Typography component={'h4'} variant={'h5'} color="black" fontWeight={'bold'} sx={{backgroundColor: 'RGB(34,34,34)'}}>Add Workout</Typography>
+            <Typography component={'h4'} variant={'h5'} color="white"
+            
+            fontWeight={'bold'} sx={{backgroundColor: 'RGB(34,34,34)'}}
+            >Add Workout</Typography>
 
             <br />
          
-            <TextField error={errsOnForm.date} type='date' id="input-date" label="Date" InputLabelProps={{ shrink: true }} onBlur={(e) => setDate(e.target.value)} sx={{width: 'min(220px, 50%)', color:"orange" }} helperText="Required"/>
+            <TextField error={errsOnForm.date} type='date' id="input-date" label="Date" InputLabelProps={{ shrink: true }} onBlur={(e) => setDate(e.target.value)} sx={{width: 'min(220px, 50%)', color:"orange", borderColor: "orange" }} helperText="Required" color="secondary"/>
 
             <br />
 
