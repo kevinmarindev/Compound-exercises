@@ -94,9 +94,8 @@ const Input = ({ setDisplay }: ITableProps) => {
     
         }}
         >
-            <Typography component={'h4'} variant={'h5'} color="white"
-            
-            fontWeight={'bold'} sx={{backgroundColor: 'RGB(34,34,34)'}}
+            <Typography component={'h4'} variant={'h5'} color="black"
+            fontWeight={'bold'} sx={{backgroundColor: 'white'}}
             >Add Workout</Typography>
 
             <br />
