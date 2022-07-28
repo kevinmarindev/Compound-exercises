@@ -88,23 +88,23 @@ const Input = ({ setDisplay }: ITableProps) => {
        
     }
   return (
-    <div style={{ backgroundColor: 'white'}}>
+    <div style={{ backgroundColor: 'RGB(36,36,36)'}}>
         <Box component={'form'} id='form1' ref={dateIt} 
         sx={{'& .MuiTextField-root': { marginBottom: 2, marginRight: 2}
     
         }}
         >
-            <Typography component={'h4'} variant={'h5'} color="black"
-            fontWeight={'bold'} sx={{backgroundColor: 'white'}}
+            <Typography component={'h4'} variant={'h5'} color="white"
+            fontWeight={'bold'} sx={{backgroundColor: 'RGB(36,36,36)'}}
             >Add Workout</Typography>
 
             <br />
          
-            <TextField error={errsOnForm.date} type='date' id="input-date" label="Date" InputLabelProps={{ shrink: true }} onBlur={(e) => setDate(e.target.value)} sx={{width: 'min(220px, 50%)', color:"orange", borderColor: "orange" }} helperText="Required" color="secondary"/>
+            <TextField error={errsOnForm.date} type='date' id="input-date" label="Date" InputLabelProps={{ shrink: true }} onBlur={(e) => setDate(e.target.value)} sx={{width: 'min(220px, 50%)', color:"secondary", borderColor: "orange" }} helperText="Required" />
 
             <br />
 
-            <TextField error={errsOnForm.weight} type='number' id="input-weight" label="Weight" 
+            <TextField error={errsOnForm.weight} type='number' id="input-weight" label="Weight" color="info"
             onChange={(e) => setWeight(e.target.value)} sx={{width: {xs: '25%'}}} helperText="Required"/>
 
             <TextField error={errsOnForm.reps} type='number' id="input-reps" label="Reps" onChange={(e) => setReps(e.target.value)} sx={{width: {xs: '25%'}}} helperText="Required"/>
