@@ -5,6 +5,7 @@ import  Typography  from "@mui/material/Typography"
 import React, { useState, useRef } from "react"
 import { useLocation } from 'react-router-dom'
 import { css } from '@emotion/react'
+import { red } from "@mui/material/colors"
 
 interface IerrProps {
     date?: boolean,
@@ -88,14 +89,17 @@ const Input = ({ setDisplay }: ITableProps) => {
        
     }
   return (
-    <div style={{ backgroundColor: 'RGB(36,36,36)'}}>
+    <div style={{ backgroundColor: 'white'}}>
         <Box component={'form'} id='form1' ref={dateIt} 
-        sx={{'& .MuiTextField-root': { marginBottom: 2, marginRight: 2}
-    
-        }}
+        sx={{'& .MuiTextField-root': { marginBottom: 2, marginRight: 2},
+        '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: 'red',
+    }, '&:hover fieldset': {borderColor: 'purple'}
+        }}}
         >
-            <Typography component={'h4'} variant={'h5'} color="white"
-            fontWeight={'bold'} sx={{backgroundColor: 'RGB(36,36,36)'}}
+            <Typography component={'h4'} variant={'h5'} color="black"
+            fontWeight={'bold'} sx={{backgroundColor: 'white'}}
             >Add Workout</Typography>
 
             <br />
