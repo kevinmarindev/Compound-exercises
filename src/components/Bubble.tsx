@@ -54,8 +54,8 @@ const Bubbles = ({ display }: ITableProps) => {
                 y: arr[2],
                 r: arr[3]
             })),
-            backgroundColor: "#FE3366",
-            borderColor: '#F6F7F8'
+            backgroundColor: "RGB(255,77,7)",
+            borderColor: 'RGB(255,77,7)'
         }
       ]
       
@@ -71,8 +71,8 @@ const Bubbles = ({ display }: ITableProps) => {
                 y: arr[2],
                 r: arr[3]
             })),
-            backgroundColor: '#FE3366',
-            borderColor: '#F6F7F8',
+            backgroundColor: 'RGB(255,77,7)',
+            borderColor: 'RGB(255,77,7)',
         }
         
       ]

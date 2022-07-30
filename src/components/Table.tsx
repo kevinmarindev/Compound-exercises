@@ -58,7 +58,7 @@ console.log(check)
     <TableContainer component={Paper} sx={{width: "100%", marginBottom: '30px', marginTop: '40px', backgroundColor:'#F6F7F8'}} >
       <Switch onChange={sortByWeightOne} ref={switchOne}></Switch>
       <Box component={'span'} display={'inline'}>Filter by weight</Box>
-      <Table sx={{ minWidth: 300 }} aria-label="simple table">
+      <Table sx={{ minWidth: 300}} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>Date</TableCell>
@@ -78,7 +78,7 @@ console.log(check)
               <TableCell align="center">{item[1]}</TableCell>
               <TableCell align="center">{item[2]}</TableCell>
               <TableCell align="center" >{item[3]}</TableCell>
-              <div style={{marginTop: '25%'}}><Delete onClick={() => deleteOne(array, item)} style={{color: '#FE3366'}}/></div>
+              <div style={{marginTop: '25%'}}><Delete onClick={() => deleteOne(array, item)} style={{color: 'RGB(255,77,7)'}}/></div>
             </TableRow>
           ))}
         </TableBody>

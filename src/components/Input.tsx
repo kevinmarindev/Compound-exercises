@@ -93,10 +93,11 @@ const Input = ({ setDisplay }: ITableProps) => {
         <Box component={'form'} id='form1' ref={dateIt} 
         sx={{'& .MuiTextField-root': { marginBottom: 2, marginRight: 2},
         '& .MuiOutlinedInput-root': {
-    '& fieldset': {
-      borderColor: 'red',
-    }, '&:hover fieldset': {borderColor: 'purple'}
-        }}}
+            '& fieldset': {borderColor: 'RGB(109,109,109)'},
+            '&:focus fieldset': {borderColor: 'RGB(255,77,7)'}},
+            '& .MuiFormHelperText-root': {color: 'black'},
+            '& .MuiButton-root': {backgroundColor: 'RGB(255,77,7)'}
+        }}
         >
             <Typography component={'h4'} variant={'h5'} color="black"
             fontWeight={'bold'} sx={{backgroundColor: 'white'}}
@@ -104,7 +105,7 @@ const Input = ({ setDisplay }: ITableProps) => {
 
             <br />
          
-            <TextField error={errsOnForm.date} type='date' id="input-date" label="Date" InputLabelProps={{ shrink: true }} onBlur={(e) => setDate(e.target.value)} sx={{width: 'min(220px, 50%)', color:"secondary", borderColor: "orange" }} helperText="Required" />
+            <TextField error={errsOnForm.date} type='date' id="input-date" label="Date" InputLabelProps={{ shrink: true }} onBlur={(e) => setDate(e.target.value)} sx={{width: 'min(220px, 50%)'}} helperText="Required" />
 
             <br />
 
@@ -117,7 +118,7 @@ const Input = ({ setDisplay }: ITableProps) => {
 
             
 
-            <Button variant='contained' form='form1' color='primary' onClick={submitForm}size='medium' sx={{display: 'block', marginBottom: 3}}>Submit</Button>
+            <Button variant='contained' form='form1' color='primary' onClick={submitForm}size='medium' sx={{display: 'block', marginBottom: 3, '& .MuiButton-text': {color: 'red'}}}>Submit</Button>
 
             {alert ? <Alert severity="error">Numbers are beyond human capabilities</Alert> : success ? <Alert severity="success">Data added successfully</Alert> : ''}
 
